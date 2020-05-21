@@ -7,6 +7,7 @@
     "dotenv": "^8.1.0",
     "gatsby": "^2.20.0",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-google-tagmanager": "^2.3.3",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sass": "^2.1.24",
     "gatsby-source-datocms": "^2.1.29",
@@ -26,9 +27,13 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "gatsby:build": "gatsby build",
+    "gatsby:clean": "gatsby clean",
+    "gatsby:develop": "gatsby develop",
+    "gatsby:serve": "gatsby serve",
+    "gatsby": "npm run gatsby:clean && npm run gatsby:build && npm run gatsby:serve",
+    "start": "npm run gatsby:develop"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
